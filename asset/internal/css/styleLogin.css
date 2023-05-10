@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: rgba(0, 0, 0, 0.3)
-    url("../../public/img/img-local/vintage-garden.jpg");
+    url("../../../asset/internal/img/img-local/vintage-garden.jpg");
   background-size: cover;
   background-position: 70% 20%;
   background-blend-mode: darken;
@@ -96,6 +96,29 @@ h1 {
   text-decoration: none;
   font-family: raleway;
   padding-left: 80px;
+}
+
+/* Alert */
+.alert {
+  width: 350px;
+  padding: 15px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 
 @media screen and (max-width: 576px) {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../../public/datatables/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../datatables/css/jquery.dataTables.css">
     <style>
         label{
         font-family: Montserrat;    
@@ -86,7 +86,7 @@
                         <button><i class="fa fa-pencil"></i>edit</button> 
                         </a>
 
-                        <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../models/admin/delete-admin.php?id=<?php echo $row['nia']; ?>">
+                        <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/models/admin/delete-admin.php?id=<?php echo $row['nia']; ?>">
                         <button><i class="fa fa-trash-o"></i>hapus</button>
                         </a>
                     </td>
@@ -101,17 +101,17 @@
         <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
         </a>
 
-        <a target="_blank" href="../models/admin/excel-admin.php">
+        <a target="_blank" href="../system/models/admin/excel-admin.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Excel</button>
         </a>
 
-        <a target="_blank" href="../models/admin/print-admin.php">
+        <a target="_blank" href="../system/models/admin/print-admin.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
         </a>
     </div>
 
-    <script type="text/javascript" src="../../public/datatables/js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../public/datatables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../datatables/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../datatables/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
            $('#example').DataTable();

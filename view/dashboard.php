@@ -4,7 +4,7 @@
       header('location:login.php');
   } else {   
   error_reporting(E_ALL | E_STRICT); 
-  include_once("../config/koneksi.php");
+  include_once("../system/config/koneksi.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +12,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Sidebar</title>
+    <title>Dashboard</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../public/css/styleDashboard.css" />
+    <link rel="stylesheet" href="../asset/internal/css/styleDashboard.css" />
   </head>
 
   <body>
@@ -25,7 +25,7 @@
       <div class="logo_content">
         <div class="logo">
           <a href="dashboard.php?page=data-admin">
-            <img src="../../public/img/logo.png" alt="" />
+            <img src="../asset/internal/img/logo.png" alt="" />
           </a>
         </div>
         <i class="fa fa-bars" id="btn"></i>
@@ -45,21 +45,21 @@
           <span class="tooltip">Data Admin</span>
         </li>
         <li>
-          <a href="">
+          <a href="dashboard.php?page=data-nasabah-full">
             <i class="fa fa-users"></i>
             <span class="link_name">Data Nasabah</span>
           </a>
           <span class="tooltip">Data Nasabah</span>
         </li>
         <li>
-          <a href="">
+          <a href="dashboard.php?page=data-sampah">
             <i class="fa fa-trash"></i>
             <span class="link_name">Data Sampah</span>
           </a>
           <span class="tooltip">Data Sampah</span>
         </li>
         <li>
-          <a href="">
+          <a href="dashboard.php?page=data-setor">
             <i class="fa fa-handshake-o"></i>
             <span class="link_name">Transaksi Setor</span>
           </a>
@@ -80,7 +80,7 @@
           <span class="tooltip">Grafik Monitoring</span>
         </li>
         <li>
-          <a href="">
+          <a href="../system/models/login/logout.php">
             <i class="fa fa-sign-out"></i>
             <span class="link_name">Logout</span>
           </a>
@@ -96,25 +96,25 @@
           
         switch ($page) {
           case 'data-admin':
-            include "../models/admin/view-admin.php";
+            include "../system/models/admin/view-admin.php";
             break;
           case 'tambah-data-admin':
-            include "../models/admin/tambah-admin.php";
+            include "../system/models/admin/tambah-admin.php";
             break;
           case 'data-admin-full':
-            include "../models/admin/view-admin-full.php";
+            include "../system/models/admin/view-admin-full.php";
             break;
           case 'edit-admin-id':
-            include "../models/admin/edit-admin-id.php";
+            include "../system/models/admin/edit-admin-id.php";
             break;
           case 'edit-admin':
-            include "../models/admin/edit-admin.php";
+            include "../system/models/admin/edit-admin.php";
             break;
           case 'edit-sampah':
             include "../system/function/edit-sampah.php";
             break;
           case 'data-nasabah-full':
-            include "../system/function/view-nasabah-full.php";
+            include "../system/models/nasabah/view-nasabah-full.php";
             break;
           case 'edit-nasabah-id':
             include "../system/function/edit-nasabah-id.php";
@@ -123,7 +123,7 @@
             include "../system/function/tambah-nasabah.php";
             break;
           case 'data-sampah':
-            include "../system/function/view-sampah.php";
+            include "../system/models/sampah/view-sampah.php";
             break;
           case 'tambah-data-setor':
             include "../system/function/tambah-setor.php";
@@ -135,7 +135,7 @@
             include "../system/function/tambah-tarik.php";
             break;
           case 'data-setor':
-            include "../system/function/view-setor.php";
+            include "../system/models/transaksi/view-setor.php";
             break;
           case 'data-tarik':
             include "../system/function/view-tarik.php";
@@ -151,7 +151,7 @@
             break;
         }
       }else{
-        include "../models/admin/view-admin.php";
+        include "../system/models/admin/view-admin.php";
       }
       ?>
     </div>

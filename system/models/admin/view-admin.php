@@ -62,17 +62,17 @@
     <div class="form-group">
       <form action="" method="post">
         <label for="">Nomor Induk Admin</label>
-        <input type="text" name="nia" disabled />
+        <input type="text" name="nia" disabled value="<?php echo $row['nia'] ?>"/>
         <label for="">Nama Admin</label>
-        <input type="text" name="nama" disabled />
+        <input type="text" name="nama" disabled value="<?php echo $row['nama'] ?> "/>
         <label for="">Nomor Telepon</label>
-        <input type="text" name="noTelepon" disabled required />
+        <input type="text" name="noTelepon" disabled required value="<?php echo $row['telepon'] ?>"/>
         <label for="">Email</label>
-        <input type="text" name="email" disabled required />
+        <input type="text" name="email" disabled required value="<?php echo $row['email'] ?>"/>
         <label for="">Password</label>
-        <input type="password" name="password" disabled required />
+        <input type="password" name="password" disabled required value="<?php echo $row['password'] ?>"/>
         <label for="">Level Admin</label>
-        <input type="text" name="noTelepon" disabled /><br />
+        <input type="text" name="level" disabled value="<?php echo $row['level'] ?>"/><br />
         <input
           type="button"
           onclick="window.location='dashboard.php?page=edit-admin';"

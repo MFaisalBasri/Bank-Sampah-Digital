@@ -1,20 +1,22 @@
 <?php 
 
-require_once("../config/koneksi.php");
+require_once("../system/config/koneksi.php");
 
     $no = mysqli_query($conn, "SELECT nia FROM admin ORDER BY nia DESC");
     $nia = mysqli_fetch_array($no);
     $kode = $nia['nia'];
 
-    $urut = substr($kode, 5, 2);
+    $urut = substr($kode, 8, 2);
+echo $kode;
+echo $urut;
     $tambah = (int) $urut + 1;
     $bln = date("m");
     $thn = date("y");
 
     if(strlen($tambah) == 1){
-        $format = "adm".$thn.$bln."0".$tambah;
+        $format = "adm-".$thn.$bln."0".$tambah;
     }else{
-        $format = "adm".$thn.$bln.$tambah;
+        $format = "adm-".$thn.$bln.$tambah;
     }
 
     if(isset($_POST['simpan'])){
@@ -33,7 +35,7 @@ require_once("../config/koneksi.php");
                </script>";
  
                echo "<meta http-equiv='refresh'
-               content='0; url=http://localhost/project-web/Sidebar--main/app/view/dashboard.php?page=data-admin-full'>";
+               content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-admin-full'>";
  
                return FALSE;      
        }
@@ -45,7 +47,7 @@ require_once("../config/koneksi.php");
               </script>";
 
       echo "<meta http-equiv='refresh'
-      content='0; url=http://localhost/project-web/Sidebar--main/app/view/dashboard.php?page=data-admin-full'>";
+      content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-admin-full'>";
     }
 
 ?>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="asset/internal/css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="logo">
-               <a href=""><img src="img/img-local/logo.png" alt=""></a>
+               <a href=""><img src="asset/internal/img/img-local/logo.png" alt=""></a>
             </div>
             <ul id="top-menu">
                 <li class="active"><a href="#">Beranda</a></li>
@@ -41,7 +41,7 @@
             <p>Merubah Sampah Menjadi Penghasilan Tambahan anda!</p>
         </div>
         <div class="buttonContent">
-            <a href="../app/models/login/login.php">
+            <a href="system/models/login/login.php">
                 <div class="buttonLogin" align="center">Login</div>
             </a>
             <a href="">
@@ -65,7 +65,7 @@
 
                 <div class="coloumn">
                     <div class="wrapperPicture">
-                        <img src="img/img-content/1.jpg" alt="">
+                        <img src="asset/internal/img/img-content/1.jpg" alt="">
                     </div>
                     <div class="details">
                         <h3>#Tahap1<br><span>Lakukan Pendaftaran</span></h3>
@@ -74,7 +74,7 @@
 
                 <div class="coloumn">
                     <div class="wrapperPicture">
-                        <img src="img/img-content/1.jpg" alt="">
+                        <img src="asset/internal/img/img-content/1.jpg" alt="">
                     </div>
                     <div class="details">
                         <h3>#Tahap2<br><span>Pemilahan Sampah</span></h3>
@@ -84,7 +84,7 @@
 
                 <div class="coloumn">
                     <div class="wrapperPicture">
-                        <img src="img/img-content/3.jpg" alt="">
+                        <img src="asset/internal/img/img-content/3.jpg" alt="">
                     </div>
                     <div class="details">
                         <h3>#Tahap3<br><span>Penimbangan Sampah</span></h3>
@@ -93,7 +93,7 @@
 
                 <div class="coloumn">
                     <div class="wrapperPicture">
-                        <img src="img/img-content/4.jpg" alt="">
+                        <img src="asset/internal/img/img-content/4.jpg" alt="">
                     </div>
                     <div class="details">
                         <h3>#Tahap4<br><span>Mendapat Keuntungan</span></h3>
@@ -117,7 +117,7 @@
     <div class="containerFooter">
         <div class="wrapperFooter">
             <div class="logoFooter">
-                <img src="img/img-local/logo.png" alt="">
+                <img src="asset/internal/img/img-local/logo.png" alt="">
                 <ul>
                     <a href=""><li>Beranda</li></a>
                     <a href=""><li>Petunjuk</li></a> 
@@ -156,7 +156,7 @@
 </section>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="js/script.js"></script>
+<script src="asset/internal/js/script.js"></script>
     
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require_once('../../../public/FPDF-master/fpdf.php'); // memuat library TCPDF
+require_once('../../../asset/library/FPDF-master/fpdf.php'); // memuat library TCPDF
 
 // koneksi ke database
 $host = 'localhost';

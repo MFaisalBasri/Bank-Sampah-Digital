@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../public/css/styleLogin.css">
+    <link rel="stylesheet" href="../../../asset/internal/css/styleLogin.css">
 </head>
 <body>
+
+
+
+    <!-- <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Perhatian!</strong> Ini adalah contoh alert.
+    </div> -->
+
     <div class="loginBox">
-    <img src="../../../public/img/img-local/logo.png" alt="">
+    <img src="../../../asset/internal/img/img-local/logo.png" alt="">
         <h1>MASUK DISINI!</h1>
         <form action="cek_login.php" method="post">
             <div class="inputBox">

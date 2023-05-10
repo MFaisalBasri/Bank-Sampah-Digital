@@ -1,5 +1,5 @@
 <?php
-  require_once("../config/koneksi.php");
+  require_once("../system/config/koneksi.php");
 
  if (isset($_POST['simpan'])) {
   $id = $_POST['id'];
@@ -11,7 +11,7 @@
   $query = "UPDATE admin SET nama = '$nama', telepon = '$telepon', email = '$username', password = '$password' WHERE nia='".$id."' ";
   $queryact = mysqli_query($conn, $query);
   echo "<meta http-equiv='refresh'
-   content='0; url=http://localhost/project-web/Sidebar--main/app/view/dashboard.php?page=data-admin-full'>";
+   content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-admin-full'>";
  }
 
 ?>
