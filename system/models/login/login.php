@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="shortcut icon" href="../../../asset/internal/img/img-local/favicon.ico">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../asset/internal/css/styleLogin.css">
 </head>
@@ -20,7 +21,7 @@
     <div class="loginBox">
     <img src="../../../asset/internal/img/img-local/logo.png" alt="">
         <h1>MASUK DISINI!</h1>
-        <form action="cek_login.php" method="post">
+        <form action="cek_login2.php" method="post">
             <div class="inputBox">
                 <input type="text" name="user" autocomplete="off" placeholder="Masukan Username"><span><i class="fa fa-user" aria-hidden="true"></i></span>
             </div>

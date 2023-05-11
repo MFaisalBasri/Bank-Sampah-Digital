@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="shortcut icon" href="../asset/internal/img/img-local/favicon.ico">
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -111,22 +112,22 @@
             include "../system/models/admin/edit-admin.php";
             break;
           case 'edit-sampah':
-            include "../system/function/edit-sampah.php";
+            include "../system/models/sampah/edit-sampah.php";
             break;
           case 'data-nasabah-full':
             include "../system/models/nasabah/view-nasabah-full.php";
             break;
           case 'edit-nasabah-id':
-            include "../system/function/edit-nasabah-id.php";
+            include "../system/models/nasabah/edit-nasabah-id.php";
             break;
           case 'tambah-data-nasabah':
-            include "../system/function/tambah-nasabah.php";
+            include "../system/models/nasabah/tambah-nasabah.php";
             break;
           case 'data-sampah':
             include "../system/models/sampah/view-sampah.php";
             break;
           case 'tambah-data-setor':
-            include "../system/function/tambah-setor.php";
+            include "../system/models/transaksi-setor/tambah-setor.php";
             break;
           case 'edit-setor':
             include "../system/function/edit-setor.php";
@@ -135,7 +136,7 @@
             include "../system/function/tambah-tarik.php";
             break;
           case 'data-setor':
-            include "../system/models/transaksi/view-setor.php";
+            include "../system/models/transaksi-setor/view-setor.php";
             break;
           case 'data-tarik':
             include "../system/function/view-tarik.php";
@@ -144,7 +145,7 @@
             include "../system/function/view-report.php";
             break;
           case 'tambah-data-sampah':
-            include "../system/function/tambah-sampah.php";
+            include "../system/models/sampah/tambah-sampah.php";
             break;			
           default:
             echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";

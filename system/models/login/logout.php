@@ -21,6 +21,6 @@ unset($_SESSION['pass']);
 unset($_SESSION['telepon']);
 unset($_SESSION['nia']);
 }
-session_destroy();
+// session_destroy();
 header('location:login.php');
 ?>

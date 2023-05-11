@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda</title>
+    <link rel="shortcut icon" href="asset/internal/img/img-local/favicon.ico">
     <link rel="stylesheet" href="asset/internal/css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
@@ -74,7 +75,7 @@
 
                 <div class="coloumn">
                     <div class="wrapperPicture">
-                        <img src="asset/internal/img/img-content/1.jpg" alt="">
+                        <img src="asset/internal/img/img-content/2.jpg" alt="">
                     </div>
                     <div class="details">
                         <h3>#Tahap2<br><span>Pemilahan Sampah</span></h3>

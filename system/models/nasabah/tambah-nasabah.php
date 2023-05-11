@@ -1,56 +1,58 @@
-<?php 
 
-require_once("../system/config/koneksi.php");
+<?php
+    require_once("../system/config/koneksi.php");
 
-    $no = mysqli_query($conn, "SELECT nia FROM admin ORDER BY nia DESC");
-    $nia = mysqli_fetch_array($no);
-    $kode = $nia['nia'];
+    $no = mysqli_query($conn, "SELECT nin FROM nasabah ORDER BY nin DESC");
+    $nin = mysqli_fetch_array($no);
+    $kode = $nin['nin'];
 
-    $urut = substr($kode, 8, 2);
-    echo $kode;
-    echo $urut;
+    $urut = substr($kode, 7, 3);
     $tambah = (int) $urut + 1;
     $bln = date("m");
     $thn = date("y");
 
     if(strlen($tambah) == 1){
-        $format = "adm-".$thn.$bln."0".$tambah;
+        $format = "NSB".$thn.$bln."00".$tambah;
+    }else if (strlen($tambah) == 2) {
+        $format = "NSB".$thn.$bln."0".$tambah;
     }else{
-        $format = "adm-".$thn.$bln.$tambah;
+        $format = "NSB".$thn.$bln.$tambah;
     }
 
     if(isset($_POST['simpan'])){
-      $nia = $_POST['nia'];
+      $nin = $_POST['nin'];
       $nama = $_POST['nama'];
+      $rt = $_POST['rt'];
+      $alamat = $_POST['alamat'];
       $telepon = $_POST['telepon'];
       $email = $_POST['email'];
       $password = $_POST['password'];
-      $level = $_POST['level'];
+      $saldo = $_POST['saldo'];
+      $sampah = $_POST['sampah'];
 
-      $sql = mysqli_query($conn, "SELECT * FROM admin WHERE nama = '$nama'");
+      $sql = mysqli_query($conn, "SELECT * FROM nasabah WHERE nin = '$nin'");
 
       if (mysqli_fetch_array($sql) > 0) {
-         echo "<script>
-                 alert('Maaf akun sudah terdaftar!');
-               </script>";
- 
-               echo "<meta http-equiv='refresh'
-               content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-admin-full'>";
- 
-               return FALSE;      
-       }
+        echo "<script>
+                alert('Maaf akun sudah terdaftar');
+              </script>";
 
-       mysqli_query($conn, "INSERT INTO admin VALUES ('$nia','$nama','$telepon','$email','$password','$level')");
+              echo "<meta http-equiv='refresh'
+              content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-nasabah-full'>";
 
-       echo "<script>
+              return FALSE;      
+      }
+
+      mysqli_query($conn, "INSERT INTO nasabah VALUES ('$nin','$nama','$rt','$alamat','$telepon','$email','$password','$saldo','$sampah')");
+
+      echo "<script>
                 alert('Selamat berhasil input data!');
               </script>";
 
       echo "<meta http-equiv='refresh'
-      content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-admin-full'>";
+      content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-nasabah-full'>";
     }
-
-?>
+  ?>
 
 <html>
 <head>
@@ -74,11 +76,11 @@ require_once("../system/config/koneksi.php");
           box-shadow: 1px 2px 2px 1px #ccc;
           color: #262626;
         }
-        
+
         select{
           border-radius: 5px;
           width: 42%;
-          height: 39px;
+          height: 38px;
           background: #eee;
           padding: 0 10px;
           box-shadow: 1px 2px 2px 1px #ccc;
@@ -109,7 +111,8 @@ require_once("../system/config/koneksi.php");
             width: 85%;
             }
         }
-    </style>
+
+    </style>  
 
     <script type="text/javascript">
 
@@ -118,7 +121,7 @@ function cek_data() {
    var x1=parseInt(x);
    
    if(x==""){
-      alert("Maaf harap input nama admin!");
+      alert("Maaf harap input nama nasabah!");
       daftar_user.nama.focus(); 
       return false;
    } 
@@ -126,7 +129,20 @@ function cek_data() {
       alert ("Maaf nama harus di input huruf!");
       daftar_user.nama.focus();
       return false;
+   }
+    var p=daftar_user.rt.value;
+    if (p =="p"){
+      alert("Maaf harap input rukun tetangga (RT)!");
+      return (false); 
    }
+   var x=daftar_user.alamat.value;
+   var x1=parseInt(x);
+   
+   if(x==""){
+      alert("Maaf harap input alamat nasabah!");
+      daftar_user.alamat.focus(); 
+      return false;
+   }
    var x=daftar_user.telepon.value;
    var angka = /^[0-9]+$/;
 
@@ -170,11 +186,6 @@ function cek_data() {
       alert("Password di input minimum 6 karakter dan maksimum 20 karakter!");
       daftar_user.password.focus();
       return false;
-    }
-    var p=daftar_user.level.value;
-    if (p =="p"){
-      alert("Maaf harap input level admin!");
-      return (false);
   }else{
   confirm("Apakah Anda yakin sudah input data dengan benar?");
   }
@@ -185,18 +196,38 @@ function cek_data() {
 </head>
 
 <body>
-	   <h2 style="font-size: 30px; color: #262626;">Tambah Data Administrator</h2>
+	   <h2 style="font-size: 30px; color: #262626;">Tambah Data Nasabah</h2>
 
-	   
-     <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
+	   <form id="daftar_user" action="" method="post" onsubmit="return cek_data()">
          <div class="form-group">
-           <label class="text-left">Nomor Induk Admin</label>
-           <input style="cursor: not-allowed;" type="text" name="nia" value="<?php echo $format; ?>" readonly/>
+           <label class="text-left">Nomor Induk Nasabah</label>
+           <input style="cursor: not-allowed;" type="text" name="nin" value="<?php echo $format; ?>" readonly/>
          </div>
 
          <div class="form-group">
-           <label class="left">Nama Admin</label>
-           <input type="text" name="nama" placeholder="Masukan nama admin" />
+           <label class="left">Nama Nasabah</label>
+           <input type="text" name="nama" placeholder="Masukan nama nasabah" />
+         </div>
+
+         <div class="form-group">
+          <label class="">Rukun Tetangga (RT)</label>
+           <select name="rt">
+               <option value="p">---Pilih RT---</option>
+               <option value="1">RT01</option>
+               <option value="2">RT02</option>
+               <option value="3">RT03</option>
+               <option value="4">RT04</option>
+               <option value="5">RT05</option>
+               <option value="6">RT06</option>
+               <option value="7">RT07</option>
+               <option value="8">RT08</option>
+               <option value="9">RT09</option>
+           </select>
+         </div>
+
+         <div class="form-group">
+           <label class="">Alamat</label>
+           <input type="text" placeholder="Masukan alamat" name="alamat" />
          </div>
 
          <div class="form-group">
@@ -215,12 +246,10 @@ function cek_data() {
          </div>
 
          <div class="form-group">
-          <label class="">Level</label>
-           <select name="level">
-               <option value="p">---Pilih Level---</option>
-               <option value="Master-admin">Master-admin</option>
-               <option value="Admin">Admin</option>
-           </select>
+           <input type="hidden" name="saldo" />
+         </div>
+         <div class="form-group">
+           <input type="hidden" name="sampah" />
          </div>
 
         <input type="submit" name="simpan" value="Simpan"></input>
