@@ -67,14 +67,14 @@
           <span class="tooltip">Transaksi Setor</span>
         </li>
         <li>
-          <a href="">
+          <a href="dashboard.php?page=data-tarik">
             <i class="fa fa-handshake-o"></i>
             <span class="link_name">Transaksi Tarik</span>
           </a>
           <span class="tooltip">Transaksi Tarik</span>
         </li>
         <li>
-          <a href="">
+          <a href="dashboard.php?page=data-report">
             <i class="fa fa-line-chart"></i>
             <span class="link_name">Grafik Monitoring</span>
           </a>
@@ -130,7 +130,7 @@
             include "../system/models/transaksi-setor/tambah-setor.php";
             break;
           case 'edit-setor':
-            include "../system/function/edit-setor.php";
+            include "../system/models/transaksi-setor/edit-setor.php";
             break;
           case 'tambah-data-tarik':
             include "../system/function/tambah-tarik.php";
@@ -139,10 +139,10 @@
             include "../system/models/transaksi-setor/view-setor.php";
             break;
           case 'data-tarik':
-            include "../system/function/view-tarik.php";
+            include "../system/models/transaksi-tarik/view-tarik.php";
             break;
           case 'data-report':
-            include "../system/function/view-report.php";
+            include "../system/models/report/view-report.php";
             break;
           case 'tambah-data-sampah':
             include "../system/models/sampah/tambah-sampah.php";

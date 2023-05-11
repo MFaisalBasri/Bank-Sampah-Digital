@@ -87,11 +87,11 @@
                 <td><?php echo $row['nia'] ?></td>
                 <td>
                     
-                    <a href="admin.php?page=edit-setor&id=<?php echo $row['id_setor']; ?>">
+                    <a href="dashboard.php?page=edit-setor&id=<?php echo $row['id_setor']; ?>">
                     <button><i class="fa fa-pencil"></i>edit</button> 
                     </a>
 
-                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-setor.php?id=<?php echo $row['id_setor']; ?>">
+                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/models/transaksi-setor/delete-setor.php?id=<?php echo $row['id_setor']; ?>">
                     <button><i class="fa fa-trash-o"></i>hapus</button>
                     </a>
 
@@ -107,11 +107,11 @@
         <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
         </a>
 
-        <a target="_blank" href="../system/function/excel-setor.php">
+        <a target="_blank" href="../system/models/transaksi-setor/excel-setor.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Excel</button>
         </a>
 
-        <a target="_blank" href="../system/function/print-setor.php">
+        <a target="_blank" href="../system/models/transaksi-setor/print-setor.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
         </a>
     </div>

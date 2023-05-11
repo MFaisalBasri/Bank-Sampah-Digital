@@ -5,7 +5,7 @@
   $nin = $_POST['nin'];
   $jenis_sampah = $_POST['jenis_sampah'];
   $berat = $_POST['berat'];
-  $harga = $_POST['harga'];
+  $harga = $_POST['harga']; 
   $total = $_POST['total'];
   $nia = $_POST['nia'];
   $query = "INSERT INTO setor(id_setor,tanggal_setor,nin,jenis_sampah,berat,harga,total,nia) VALUE ('NULL','$tanggal_setor','$nin','$jenis_sampah','$berat','$harga','$total','$nia')";
@@ -14,7 +14,7 @@
   echo "<script>alert('Selamat berhasil input data!')</script>";
 
   echo "<meta http-equiv='refresh'
-   content='0; url=http://localhost/bsk09/page/admin.php?page=data-setor'>";
+   content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-setor'>";
 
  }
  ?>
@@ -22,10 +22,10 @@
 <html>
 <head>
   <title>Homepage</title>
-	<script type="text/javascript" src="../asset/plugin/datepicker/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../asset/plugin/datepicker/css/jquery.datepick.css"> 
-	<script type="text/javascript" src="../asset/plugin/datepicker/js/jquery.plugin.js"></script> 
-	<script type="text/javascript" src="../asset/plugin/datepicker/js/jquery.datepick.js"></script>
+	<script type="text/javascript" src="../asset/library/datepicker/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../asset/library/datepicker/css/jquery.datepick.css"> 
+	<script type="text/javascript" src="../asset/library/datepicker/js/jquery.plugin.js"></script> 
+	<script type="text/javascript" src="../asset/library/datepicker/js/jquery.datepick.js"></script>
 	
 
 
@@ -149,7 +149,8 @@ function cek_data() {
 			$("#insert-form").append("<b>Data ke " + nextform + " :</b>" +
 				"<table>" +
 			
-				"<div class='form-group'><label class='text-left'>Tanggal Penyetoran</label><input type='date' placeholder='Masukan tanggal setor' id='date'  name='tanggal_setor' /></div>" +
+				"<div class='form-group'><label class='text-left'>Tanggal Penyetoran</label><input type='date' placeholder='Masukan tanggal setor' id='date'  name='tanggal_setor' /></div>"
+        +
 				
 				"<div class='form-group'><label class=''>Nomor Induk Nasabah</label><select class='nomornasabah' name='nin' ><option value='pnin'>---Pilih NIN---</option><?php $query = mysqli_query($conn, "SELECT * FROM nasabah"); while ($row = mysqli_fetch_array($query)) {echo '<option value='.$row['nin'].'>'. $row['nin'] . '</option>';}?></select></div>"+
 				
