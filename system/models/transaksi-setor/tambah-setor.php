@@ -183,8 +183,8 @@ function cek_data() {
 
 <body>
 		<h2 style="font-size: 30px; color: #262626;">Setor Sampah</h2>
-		<button type="button" id="btn-tambah-form">Tambah Data Form</button>
-		<button type="button" id="btn-reset-form">Reset Form</button><br><br>
+		<!-- <button type="button" id="btn-tambah-form">Tambah Data Form</button>
+		<button type="button" id="btn-reset-form">Reset Form</button><br><br> -->
      <form id="daftar_user" name='autoSumForm' action="" method="post" onsubmit="return cek_data()">
          
          <div class="form-group">

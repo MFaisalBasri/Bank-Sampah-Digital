@@ -14,7 +14,7 @@
         text: 'Data Jumlah Nasabah Tiap RT'
     },
     subtitle: {
-        text: 'Source: Bank Sampah Kenanga 09'
+        text: 'Source: Bank Sampah Kembang Telang 05'
     },
     xAxis: {
         categories: [<?php $query = mysqli_query($conn, "SELECT * FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo $row['rt'].","; } ?>],
@@ -49,7 +49,7 @@
         }
     },
     series: [ {
-        name: 'Nasabah RW. 009',
+        name: 'Nasabah RW. 005',
         data: [<?php $query = mysqli_query($conn, "SELECT COUNT(nin) AS jiwa FROM nasabah group by rt"); while($row = mysqli_fetch_array($query)){echo ($row['jiwa']).","; } ?>]
     }]
 });

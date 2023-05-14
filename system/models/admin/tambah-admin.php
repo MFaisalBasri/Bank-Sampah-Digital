@@ -7,8 +7,6 @@ require_once("../system/config/koneksi.php");
     $kode = $nia['nia'];
 
     $urut = substr($kode, 8, 2);
-    echo $kode;
-    echo $urut;
     $tambah = (int) $urut + 1;
     $bln = date("m");
     $thn = date("y");

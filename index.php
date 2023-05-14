@@ -39,7 +39,7 @@
     <div class="wrapperContent">
         <div class="headingContent">
             <h1>Bank Sampah Digital</h1>
-            <p>Merubah Sampah Menjadi Penghasilan Tambahan anda!</p>
+            <!-- <p>Merubah Sampah Menjadi Penghasilan Tambahan anda!</p> -->
         </div>
         <div class="buttonContent">
             <a href="system/models/login/login.php">
@@ -59,7 +59,7 @@
         <div class="container-content-two">
             <div class="rowHeader">
                 <h1>TERTARIK BERGABUNG ???</h1>
-                <p>Bank sampah Sejahtra adalah organisasi peduli lingkungan yang berlokasi di Desa Karangwotan Kecamatan Pucakwangi Kabupaten Pati. Selain bidang bank sampah kami juga berfokus pada pengelolaan sampah, seperti komposting berbasis sampah, kerajinan berbahan baku sampah, dan masih banyak lagi program yang kami kembangkan. Saat ini bank sampah sejahtra melayani warga Desa Karangwotan yang berjumlah lebih dari 500 kepala keluarga. Hal itu menunjukan bahwa warga masyarakat Karangwotan sangat antusias dengan adanya program ini, dan tentu bank sampah sejahtra mendapatkan perhatian khusus dari warga sekitar. Jika Anda berminat untuk bergabung, silahkan ikuti langkah berikut ini.</p>
+                <p>Bank Sampah Kembang Telang adalah organisasi peduli lingkungan yang berlokasi di Kelurahan Grogol Selatan RT.07/RW.05 Kecamatan Kebayoran Lama kota Jakarta Selatan. Selain bidang bank sampah kami juga berfokus pada pengelolaan sampah, seperti komposting berbasis sampah, kerajinan berbahan baku sampah dan masih banyak lagi program yang kami kembangkan. saat ini Bank Sampah Kembang Telang melayani warga Grogol Selatan RW.05 yang berjumlah lebih dari 1003 kepala keluarga. </p>
             </div><br><br>
 
             <div class="rowPict">
@@ -110,7 +110,7 @@
     <div class="wrapperLocation">
         <h1 align="center">Lokasi Bank Sampah</h1>
         <br><br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31690.51770907316!2d111.10782528651586!3d-6.852828623794187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7733658dcf4705%3A0xddde23cc7ba079af!2sKarangwotan%2C%20Kec.%20Pucakwangi%2C%20Kabupaten%20Pati%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1662485412601!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.030400779016!2d106.76983026315055!3d-6.22973106906133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f12571b5b083%3A0xcffd16d8ea77fbb8!2sGrogol%20Sel.%2C%20Kec.%20Kby.%20Lama%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1683815664678!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
     </div>    
 </div>
 
@@ -130,15 +130,11 @@
             <div class="kontakFooter">
                 <div class="subKontakFooter">
                     <i class="fa fa-map-marker"></i>
-                    <p><span>Desa Jatimulya</span>Kecamatan Tambun Selatan</p>
+                    <p><span>Kelurahan Grogol Selatan RT.07/RW.05</span>Kecamatan Kebayoran Lama kota Jakarta Selatan.</p>
                 </div>
                 <div class="subKontakFooter">
                     <i class="fa fa-phone"></i>
-                    <p><a href="">(+62)812 3451 2334</a></p>
-                </div>
-                <div class="subKontakFooter">
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="">banksampah.digital@gmail.com</a></p>
+                    <p><a href="sms:(+62)85694519585">(+62)812 3451 2333</a></p>
                 </div>
             </div>
             <div class="mediaSosial">

@@ -12,12 +12,25 @@ $conn = mysqli_connect($host, $user, $pass, $dbname);
 $query = "SELECT * FROM setor";
 $result = mysqli_query($conn, $query);
 
+class pdf extends FPDF {
+    function logo($gambar){
+        $this->Image($gambar, 10, 10, 20, 25);
+    }
+    function judul($teks){
+        $this->Cell(95);
+        $pdf->SetFont('Arial', 'B', 16);
+        $pdf->Cell(0, 10, 'Data Transaksi Setor', 0, 1, "C");
+    }
+}
+
 // membuat objek PDF
 $pdf = new FPDF();
 
 // menambah halaman
 $pdf->AddPage();
 
+// $pdf->logo("../../../asset/internal/img/img-local/logo.png");
+// $pdf->judul("tes");
 // menampilkan judul
 $pdf->SetFont('Arial', 'B', 16);
 $pdf->Cell(0, 10, 'Data Transaksi Setor', 0, 1, "C");

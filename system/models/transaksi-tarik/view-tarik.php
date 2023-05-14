@@ -70,32 +70,32 @@
         </tr>   
         </tfoot>
         <tbody>
-        <?php
-            $no = 0;
-            $query = mysqli_query($conn, "SELECT * FROM tarik ORDER BY id_tarik ASC");
-            while($row = mysqli_fetch_assoc($query)){$no++;
-        ?>
-        <tr align="center">
-            <td>dsafdsf<?php echo "$no" ?></td>
-            <td><?php echo $row['id_tarik'] ?></td>
-            <td><?php echo $row['tanggal_tarik'] ?></td>
-            <td><?php echo $row['nin'] ?></td>
-            <td><?php echo "Rp. ".number_format($row['saldo'], 2, ",", ".")  ?></td>
-            <td><?php echo "Rp. ".number_format($row['jumlah_tarik'], 2, ",", ".")  ?></td>
-            <td><?php echo $row['nia'] ?></td>
-            <td>
-                
-                <a href="a">
-                <button><i class="fa fa-pencil"></i>edit</button> 
-                </a>
+            <?php
+                $no = 0;
+                $query = mysqli_query($conn, "SELECT * FROM tarik ORDER BY id_tarik ASC");
+                while($row = mysqli_fetch_assoc($query)){$no++;
+            ?>
+            <tr align="center">
+                <td>dsafdsf<?php echo "$no" ?></td>
+                <td><?php echo $row['id_tarik'] ?></td>
+                <td><?php echo $row['tanggal_tarik'] ?></td>
+                <td><?php echo $row['nin'] ?></td>
+                <td><?php echo "Rp. ".number_format($row['saldo'], 2, ",", ".")  ?></td>
+                <td><?php echo "Rp. ".number_format($row['jumlah_tarik'], 2, ",", ".")  ?></td>
+                <td><?php echo $row['nia'] ?></td>
+                <td>
+                    
+                    <a href="a">
+                    <button><i class="fa fa-pencil"></i>edit</button> 
+                    </a>
 
-                <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-tarik.php?id=<?php echo $row['id_tarik']; ?>">
-                <button><i class="fa fa-trash-o"></i>hapus</button>
-                </a>
+                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/function/delete-tarik.php?id=<?php echo $row['id_tarik']; ?>">
+                    <button><i class="fa fa-trash-o"></i>hapus</button>
+                    </a>
 
-            </td>
-        </tr>
-        <?php } ?>
+                </td>
+            </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>

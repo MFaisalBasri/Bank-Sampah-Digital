@@ -22,6 +22,12 @@
   </head>
 
   <body>
+
+  <?php 
+	    $cek = mysqli_query($conn, "SELECT * FROM admin WHERE nia='".$_SESSION['nia']."'");
+	    $row = mysqli_fetch_array($cek);
+  ?>
+
     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
@@ -38,6 +44,13 @@
       </div>
 
       <ul class="nav">
+
+            <?php
+							$level = $_SESSION['level'] == 'Admin';
+							if($level){
+								}else{
+						?>	
+
         <li>
           <a href="dashboard.php?page=data-admin-full">
             <i class="fa fa-user"></i>
@@ -45,6 +58,9 @@
           </a>
           <span class="tooltip">Data Admin</span>
         </li>
+
+        <?php } ?>
+
         <li>
           <a href="dashboard.php?page=data-nasabah-full">
             <i class="fa fa-users"></i>
@@ -152,7 +168,12 @@
             break;
         }
       }else{
-        include "../system/models/admin/view-admin.php";
+        
+        $level = $_SESSION['level'] == 'Master-Admin';
+        if($level){
+        }else{
+            include "../system/models/admin/view-admin.php";
+          }
       }
       ?>
     </div>

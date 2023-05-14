@@ -1,13 +1,15 @@
 
 <?php
 include '../../config/koneksi.php';
+error_reporting(0);
+ini_set('display_errors', 0);
 		if(isset($_POST['login'])){
-			$user = mysqli_real_escape_string($conn, $_POST['user']);
+			$email = mysqli_real_escape_string($conn, $_POST['email']);
 			$pass = mysqli_real_escape_string($conn, $_POST['password']);
 
 
-			$data_admin = mysqli_query($conn, "SELECT * FROM admin WHERE nia = '$user' AND password = '$pass'");
-			$data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE nin = '$user' AND password = '$pass'");
+			$data_admin = mysqli_query($conn, "SELECT * FROM admin WHERE email = '$email' AND password = '$pass'");
+			$data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE email = '$email' AND password = '$pass'");
 
 			$n = mysqli_fetch_array($data_nasabah);
 			$a = mysqli_fetch_array($data_admin);
@@ -33,7 +35,7 @@ include '../../config/koneksi.php';
 			$sampah = $n['sampah'];
 			$cek_user = mysqli_num_rows($data_nasabah);
 
-			if ($user == "" || $pass == "") {
+			if ($email == "" || $pass == "") {
 				echo "
 				<script>
 					alert('Username dan Password tidak boleh kosong!');
@@ -71,7 +73,7 @@ include '../../config/koneksi.php';
 				echo "
 					<script>
 						alert('Selamat Anda berhasil login!');
-						document.location.href ='nasabah.php';
+						document.location.href ='../../../view/dashboard.php';
 					</script>
 				";	
 				}
