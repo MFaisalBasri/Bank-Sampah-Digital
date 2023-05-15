@@ -7,7 +7,7 @@
     <title>Beranda</title>
     <link rel="shortcut icon" href="asset/internal/img/img-local/favicon.ico">
     <link rel="stylesheet" href="asset/internal/css/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -45,7 +45,7 @@
             <a href="system/models/login/login.php">
                 <div class="buttonLogin" align="center">Login</div>
             </a>
-            <a href="">
+            <a href="system/models/login/registrasi.php">
                 <div class="buttonRegister" align="center">Register</div>
             </a>
         </div>  
@@ -134,7 +134,7 @@
                 </div>
                 <div class="subKontakFooter">
                     <i class="fa fa-phone"></i>
-                    <p><a href="sms:(+62)85694519585">(+62)812 3451 2333</a></p>
+                    <p><a href="wa:(+62)85694519585">(+62)812 3451 2333</a></p>
                 </div>
             </div>
             <div class="mediaSosial">
@@ -152,7 +152,7 @@
     </div>
 </section>
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="asset/internal/js/script.js"></script>
     
 </body>
