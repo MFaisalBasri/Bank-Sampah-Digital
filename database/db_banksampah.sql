@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Bulan Mei 2023 pada 00.27
+-- Waktu pembuatan: 15 Bulan Mei 2023 pada 17.56
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.1.17
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`nia`, `nama`, `telepon`, `email`, `password`, `level`) VALUES
-('adm-230502', 'administrator     ', '081222333123', 'admin@gmail.org', 'admin123', 'Master-admin'),
+('adm-230502', 'administrator     ', '081222333123', 'admin@gmail.com', 'admin123', 'Master-admin'),
 ('adm-230503', 'David maulana ', '032111444540', 'internets420@gmail.com', 'admin123', 'Admin');
 
 -- --------------------------------------------------------
@@ -67,9 +67,9 @@ CREATE TABLE `nasabah` (
 --
 
 INSERT INTO `nasabah` (`nin`, `nama`, `rt`, `alamat`, `telepon`, `email`, `password`, `saldo`, `sampah`) VALUES
-('NSB1712001', 'Ihsmi  ', 2, 'Jl. murai 8, C.45/4', '085617287718', 'ihsmiica@gmail.com', 'user123', 43500, 1),
-('NSB1712002', 'Sabrina   ', 4, 'Jl. murai 8, C.45/4', '085617287718', 'sabrina123@gmail.com', '12345678', 18, 0),
-('NSB2305003', 'David maulana', 2, 'Kp Jati', '032111444540', 'aditya@gmail.com', 'admin123', 0, 0);
+('NSB1712001', 'Siti', 2, 'Jl Pahlawan No.3C', '085617287718', 'ihsmiica@gmail.com', 'user123', 0, 1),
+('NSB1712002', 'Putri', 4, 'Jl Cendrawasih No.2', '085617287718', 'sabrina123@gmail.com', '12345678', 27000, 0),
+('NSB2305003', 'David maulana', 2, 'Kp Jati', '032111444540', 'aditya@gmail.com', 'admin123', 32000, 0);
 
 -- --------------------------------------------------------
 
@@ -117,12 +117,8 @@ CREATE TABLE `setor` (
 --
 
 INSERT INTO `setor` (`id_setor`, `tanggal_setor`, `nin`, `jenis_sampah`, `berat`, `harga`, `total`, `nia`) VALUES
-(26, '2023-05-05', 'NSB1712001', 'HVS', 1, 9000, 9000, 'admin123'),
-(27, '2023-05-10', 'NSB1712001', 'HVS', 3, 9000, 27000, 'adm-23050'),
-(28, '2023-05-11', 'NSB1712001', 'Logam', 3, 2500, 7500, 'adm-23050'),
-(29, '2023-05-31', 'NSB1712002', 'kaleng ', 39, 25009, 9, 'adm-23050'),
-(30, '2023-04-01', 'NSB2305004', 'HVS', 3, 9000, 50000, 'adm-23050'),
-(32, '2023-05-31', 'NSB1712002', 'kaleng ', 39, 25009, 9, 'adm-23050');
+(1, '2023-05-15', 'NSB2305003', 'Kardus ', 4, 8000, 32000, 'adm-23050'),
+(2, '2023-05-16', 'NSB1712002', 'HVS', 3, 9000, 27000, 'adm-23050');
 
 -- --------------------------------------------------------
 
@@ -181,7 +177,7 @@ ALTER TABLE `tarik`
 -- AUTO_INCREMENT untuk tabel `setor`
 --
 ALTER TABLE `setor`
-  MODIFY `id_setor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_setor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tarik`

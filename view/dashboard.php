@@ -40,7 +40,7 @@
 
       <div class="src">
         <i class="bx-search fa fa-arrow-right"></i>
-        <input type="text" placeholder="Search..." />
+        <input type="text" disable placeholder="Geser..." />
       </div>
 
       <ul class="nav">
@@ -82,13 +82,13 @@
           </a>
           <span class="tooltip">Transaksi Setor</span>
         </li>
-        <li>
+        <!-- <li>
           <a href="dashboard.php?page=data-tarik">
             <i class="fa fa-handshake-o"></i>
             <span class="link_name">Transaksi Tarik</span>
           </a>
           <span class="tooltip">Transaksi Tarik</span>
-        </li>
+        </li> -->
         <li>
           <a href="dashboard.php?page=data-report">
             <i class="fa fa-line-chart"></i>

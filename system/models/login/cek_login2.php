@@ -11,9 +11,9 @@ ini_set('display_errors', 0);
 
 
 			$data_admin = mysqli_query($conn, "SELECT * FROM admin WHERE email = '$email' AND password = '$pass'");
-			$data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE email = '$email' AND password = '$pass'");
+			// $data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE email = '$email' AND password = '$pass'");
 
-			$n = mysqli_fetch_array($data_nasabah);
+			// $n = mysqli_fetch_array($data_nasabah);
 			$a = mysqli_fetch_array($data_admin);
 
 			// admin
@@ -26,16 +26,16 @@ ini_set('display_errors', 0);
 			$nia = $a['nia']; 	
 			$cek_admin = mysqli_num_rows($data_admin);
 			// nasabah
-			$email_n = $n['email'];
-			$password_n = $n['password'];
-			$nama_n = $n['nama'];
-			$telepon_n = $n['telepon'];
-			$alamat = $n['alamat'];
-			$nin = $n['nin'];
-			$rt = $n['rt'];
-			$saldo = $n['saldo'];
-			$sampah = $n['sampah'];
-			$cek_user = mysqli_num_rows($data_nasabah);
+			// $email_n = $n['email'];
+			// $password_n = $n['password'];
+			// $nama_n = $n['nama'];
+			// $telepon_n = $n['telepon'];
+			// $alamat = $n['alamat'];
+			// $nin = $n['nin'];
+			// $rt = $n['rt'];
+			// $saldo = $n['saldo'];
+			// $sampah = $n['sampah'];
+			// $cek_user = mysqli_num_rows($data_nasabah);
 
 			if ($email == "" || $pass == "") {
 				echo "
