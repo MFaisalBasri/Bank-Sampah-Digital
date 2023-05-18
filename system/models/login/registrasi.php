@@ -53,6 +53,7 @@ require_once("../../config/koneksi.php");
 <html>
 <head>
 	<title>Homepage</title>
+   <link rel="shortcut icon" href="../../../asset/internal/img/img-local/favicon.ico">
 	<!--link datatables-->
     <style>
 

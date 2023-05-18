@@ -38,7 +38,7 @@
 <div class="container">
     <div class="wrapperContent">
         <div class="headingContent">
-            <h1>Bank Sampah Digital</h1>
+            <h1>Bank Sampah Kembang Telang</h1>
             <!-- <p>Merubah Sampah Menjadi Penghasilan Tambahan anda!</p> -->
         </div>
         <div class="buttonContent">
