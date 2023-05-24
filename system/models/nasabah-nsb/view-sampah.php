@@ -53,7 +53,6 @@
                 <th>Harga</th>
                 <th>Gambar</th>
                 <th>Deskripsi</th>
-                <th>Aksi</th>
             </tr>
             </thead>
             <tfoot>
@@ -65,7 +64,6 @@
                 <th>Harga</th>
                 <th>Gambar</th>
                 <th>Deskripsi</th>
-                <th>Aksi</th>
             </tr>   
             </tfoot>
             <tbody>
@@ -82,37 +80,12 @@
                 <td><?php echo "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
                 <td><img src="../asset/internal/img/uploads/<?php echo $row['gambar'] ?>" width="100px" height="50px"></td>
                 <td><?php echo $row['deskripsi'] ?></td>
-                <td>
-
-                    <a href="dashboard.php?page=edit-sampah&id=<?php echo $row['jenis_sampah']; ?>">
-                    <button><i class="fa fa-pencil"></i>edit</button> 
-                    </a> 
-                    
-                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/models/sampah/delete-sampah.php?id=<?php echo $row['jenis_sampah']; ?>">
-                    <button><i class="fa fa-trash-o"></i>hapus</button>
-                    </a>
-
-                </td>
             </tr>
             <?php } ?>
             </tbody>
         </table>
   <</div>
     
-    <div class="buttonAdminFull">
-        <a href="dashboard.php?page=tambah-data-sampah">    
-        <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
-        </a>
-
-        <a target="_blank" href="../system/models/sampah/excel-sampah.php">
-        <button><i class="fa fa-print" aria-hidden="true"></i>Excel</button>
-        </a>
-
-        <a target="_blank" href="../system/models/sampah/print-sampah.php">
-        <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
-        </a>
-    </div>
-
     <script type="text/javascript" src="../datatables/js/jquery.min.js"></script>
     <script type="text/javascript" src="../datatables/js/jquery.dataTables.min.js"></script>
     <script>

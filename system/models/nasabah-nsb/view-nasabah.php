@@ -44,7 +44,7 @@
 </head>
  
 <body>
-	   <h2 style="font-size: 30px; color: #262626;">Data Nasabah</h2>
+	   <h2 style="font-size: 30px; color: #262626;">Data Anda</h2>
 
 	   <div class="form-group">
             <label class="text-left">Nomor Induk Nasabah</label>
@@ -92,7 +92,7 @@
 			echo $row['totalberat']; }?>"/>
          </div>
         
-         <input type="button" onclick="window.location='dashboardNasabah.php?page=edit-nasabah-id';" value="Edit Data" />
+         <input type="button" onclick="window.location='dashboardNasabah.php?page=edit-nasabah-nsb';" value="Edit Data" />
 
 </body>
 </html>

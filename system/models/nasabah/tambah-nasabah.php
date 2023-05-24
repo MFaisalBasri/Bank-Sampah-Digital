@@ -222,6 +222,8 @@ function cek_data() {
                <option value="7">RT07</option>
                <option value="8">RT08</option>
                <option value="9">RT09</option>
+               <option value="10">RT10</option>
+               <option value="11">RT11</option>
            </select>
          </div>
 

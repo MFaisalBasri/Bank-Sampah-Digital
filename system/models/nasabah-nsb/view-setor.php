@@ -56,7 +56,6 @@
                 <th>Harga</th>
                 <th>Total</th>
                 <th>NIA</th>
-                <th>Aksi</th>  
             </tr>
             </thead>
             <tfoot>
@@ -70,12 +69,11 @@
                 <th>Harga</th>
                 <th>Total</th>
                 <th>NIA</th>
-                <th>Aksi</th>       
             </tr>   
             </tfoot>
             <tbody>
             <?php
-                $query = mysqli_query($conn, "SELECT * FROM `setor` INNER JOIN nasabah on setor.nin = nasabah.nin;");
+                $query = mysqli_query($conn, "SELECT * FROM `setor` INNER JOIN nasabah on setor.nin = nasabah.nin where nasabah.nin = '".$_SESSION['nin']."' ;");
                 while($row = mysqli_fetch_assoc($query)){
             ?>
             <tr align="center">
@@ -88,33 +86,18 @@
                 <td><?php echo "Rp. ".number_format($row['harga'], 2, ",", ".")  ?></td>
                 <td><?php echo "Rp. ".number_format($row['total'], 2, ",", ".")  ?></td>
                 <td><?php echo $row['nia'] ?></td>
-                <td>
-                    
-                    <a href="dashboard.php?page=edit-setor&id=<?php echo $row['id_setor']; ?>">
-                    <button><i class="fa fa-pencil"></i>edit</button> 
-                    </a>
-
-                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/models/transaksi-setor/delete-setor.php?id=<?php echo $row['id_setor']; ?>">
-                    <button><i class="fa fa-trash-o"></i>hapus</button>
-                    </a>
-
-                </td>
             </tr>
             <?php } ?>
             </tbody>
         </table>
     </div>
-    
-    <div class="buttonAdminFull">
-        <a href="dashboard.php?page=tambah-data-setor">
-        <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
-        </a>
 
+    <div class="buttonAdminFull">
         <a target="_blank" href="../system/models/transaksi-setor/excel-setor.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Excel</button>
         </a>
 
-        <a target="_blank" href="../system/models/transaksi-setor/print-setor.php">
+        <a target="_blank" href="../system/models/nasabah-nsb/print-setor.php?id=<?php echo $_SESSION['nin'] ?>">
         <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
         </a>
     </div>

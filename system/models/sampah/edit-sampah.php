@@ -4,6 +4,7 @@ error_reporting(E_ALL | E_STRICT);
 
  if (isset($_POST['simpan'])) {
   $jenis_sampah = $_POST['jenis_sampah'];
+  $kategori = $_POST['kategori'];
    $id = $_POST['id'];
   $satuan = $_POST['satuan'];
   $harga = $_POST['harga'];
@@ -14,9 +15,9 @@ error_reporting(E_ALL | E_STRICT);
   $folder = '../asset/internal/img/uploads/';
 
   move_uploaded_file($source, $folder.$nama_file);
-  $query = mysqli_query($conn,"UPDATE sampah SET jenis_sampah='".$jenis_sampah."',satuan='".$satuan."',harga='".$harga."',gambar='".$nama_file."',deskripsi='".$deskripsi."' WHERE jenis_sampah='$id'");	 
+  $query = mysqli_query($conn,"UPDATE sampah SET jenis_sampah='".$jenis_sampah."',kategori='".$kategori."',satuan='".$satuan."',harga='".$harga."',gambar='".$nama_file."',deskripsi='".$deskripsi."' WHERE jenis_sampah='$id'");	 
  } else {
-  $query = mysqli_query($conn,"UPDATE sampah SET jenis_sampah='".$jenis_sampah."',satuan='".$satuan."',harga='".$harga."',deskripsi='".$deskripsi."' WHERE id='$id'");	 
+  $query = mysqli_query($conn,"UPDATE sampah SET jenis_sampah='".$jenis_sampah."',kategori='".$kategori."',satuan='".$satuan."',harga='".$harga."',deskripsi='".$deskripsi."' WHERE id='$id'");	 
  }  
   if ($query){
     echo "
@@ -113,6 +114,10 @@ error_reporting(E_ALL | E_STRICT);
 		     <input type="hidden"  name="id" value="<?php echo $row['jenis_sampah'] ?>" />
          </div>
          <div class="form-group">
+          <label class="">Kategori</label>
+          <input type="text"  name="kategori" value="<?php echo $row['kategori'] ?> " readonly/>
+         </div>
+         <div class="form-group">
           <label class="">Satuan</label>
           <input type="text" name="satuan" value="<?php echo $row['satuan'] ?>" readonly />
          </div>
@@ -122,7 +127,7 @@ error_reporting(E_ALL | E_STRICT);
          </div>
          <div class="form-group">
           <label class="">Gambar</label>
-          <input type="file" name="gambar" value="<?php echo $row['gambar'] ?>"/>
+          <input type="text" name="gambar" value="<?php echo $row['gambar'] ?>" readonly/> 
          </div>
          <div class="form-group">
           <label class="">Deskripsi</label>

@@ -3,6 +3,7 @@
  if (isset($_POST['simpan'])) {
   require_once("../system/config/koneksi.php");
   $jenis_sampah = $_POST['jenis_sampah'];
+  $kategori = $_POST['kategori'];
   $satuan = $_POST['satuan'];
   $harga = $_POST['harga'];
   $nama_file = $_FILES['gambar']['name'];
@@ -12,7 +13,7 @@
 
   move_uploaded_file($source, $folder.$nama_file);
 
-  $query = mysqli_query($conn,"INSERT INTO sampah VALUES ('$jenis_sampah','$satuan','$harga','$nama_file','$deskripsi')");
+  $query = mysqli_query($conn,"INSERT INTO sampah VALUES ('$jenis_sampah', '$kategori' ,'$satuan','$harga','$nama_file','$deskripsi')");
   
   if ($query){
     echo "
@@ -170,6 +171,16 @@ function cek_data() {
          <div class="form-group">
            <label class="text-left">Jenis Sampah</label>
            <input type="text" placeholder="Masukan jenis sampah" name="jenis_sampah" />
+         </div>
+
+         <div class="form-group">
+          <label class="">Kategori</label>
+           <select name="kategori">
+               <option value="p">---Pilih Kategori---</option>
+               <option value="Organik">Organik</option>
+               <option value="Anorganik">Anorganik</option>
+               <option value="Daur Ulang">Daur Ulang</option>
+           </select>
          </div>
 
          <div class="form-group">

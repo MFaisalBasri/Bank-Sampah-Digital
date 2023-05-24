@@ -13,7 +13,7 @@
   $query = "UPDATE nasabah SET nama = '$nama', rt='$rt',alamat = '$alamat', telepon = '$telepon', email = '$email', password = '$password' WHERE nin='".$id."' ";
   $queryact = mysqli_query($conn, $query);
   echo "<meta http-equiv='refresh'
-   content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboard.php?page=data-nasabah-full'>";
+   content='0; url=http://localhost/project-web/Bank%20Sampah%20Digital/view/dashboardNasabah.php?page=data-nasabah'>";
  }
 
 ?>
@@ -84,6 +84,10 @@
          <div class="form-group">
           <label class="">Nama Nasabah</label>
           <input type="text" name="nama" value="<?php echo $row['nama'] ?> "/>
+         </div>
+         <div class="form-group">
+          <label class="">RT</label>
+          <input type="text" name="rt" value="<?php echo $row['rt'] ?>" required/>
          </div>
          <div class="form-group">
           <label class="">Alamat</label>

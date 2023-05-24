@@ -106,7 +106,7 @@ function cek_data() {
       return (false);
    }
    var x=daftar_user.berat.value;
-   var angka = /^[0-9]+$/;
+  //  var angka = /^[0-9]+$/;
 
    if(x==""){
       alert("Maaf harap input berat sampah!");
@@ -264,7 +264,7 @@ function cek_data() {
           function sum() {
           var txtFirstNumberValue = document.getElementById('berat').value;
           var txtSecondNumberValue = document.getElementById('harga').value;
-          var result = parseInt(txtFirstNumberValue) * parseInt(txtSecondNumberValue);
+          var result = parseFloat(txtFirstNumberValue) * parseFloat(txtSecondNumberValue);
           if (!isNaN(result)) {
              document.getElementById('total').value = result;
           }

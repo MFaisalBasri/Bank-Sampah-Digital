@@ -39,7 +39,6 @@
     <div class="wrapperContent">
         <div class="headingContent">
             <h1>Bank Sampah Kembang Telang</h1>
-            <!-- <p>Merubah Sampah Menjadi Penghasilan Tambahan anda!</p> -->
         </div>
         <div class="buttonContent">
             <a href="system/models/login/login.php">
@@ -58,7 +57,7 @@
 
         <div class="container-content-two">
             <div class="rowHeader">
-                <h1>TERTARIK BERGABUNG ???</h1>
+                <h1>INFORMASI UMUM</h1>
                 <p>Bank Sampah Kembang Telang adalah organisasi peduli lingkungan yang berlokasi di Kelurahan Grogol Selatan RT.07/RW.05 Kecamatan Kebayoran Lama kota Jakarta Selatan. Selain bidang bank sampah kami juga berfokus pada pengelolaan sampah, seperti komposting berbasis sampah, kerajinan berbahan baku sampah dan masih banyak lagi program yang kami kembangkan. saat ini Bank Sampah Kembang Telang melayani warga Grogol Selatan RW.05 yang berjumlah lebih dari 1003 kepala keluarga. </p>
             </div><br><br>
 
@@ -98,6 +97,15 @@
                     </div>
                     <div class="details">
                         <h3>#Tahap4<br><span>Mendapat Keuntungan</span></h3>
+                    </div>
+                </div>
+
+                <div class="coloumn">
+                    <div class="wrapperPicture">
+                        <img src="asset/internal/img/img-content/4.jpg" alt="">
+                    </div>
+                    <div class="details">
+                        <h3>#Tahap5<br><span>Mendapat setelah 31 hari</span></h3>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@
 	</style>
 </head>
 <body>
-	<h2 style="font-size: 30px; color: #262626;">Data Nasabah</h2>
+	<h2 style="font-size: 30px; color: #262626;">Data Anda</h2>
 	<div class="table" style="overflow-x:auto;">
         <table id="example" class="display" cellspacing="0" width="100%" border="0" >
             <thead>
@@ -72,7 +72,7 @@
             </tfoot>
             <tbody>
             <?php
-                $query = mysqli_query($conn, "SELECT * FROM nasabah ORDER BY nin ASC");
+                $query = mysqli_query($conn, "SELECT * FROM nasabah where nin = '".$_SESSION['nin']."'");
                 while($row = mysqli_fetch_assoc($query)){
             ?>
             <tr align="center">
@@ -103,13 +103,10 @@
                     <?php echo number_format($row['sampah'])." Kg"  ?></td>
                 <td>
 
-                    <a href="dashboard.php?page=edit-nasabah-id&id=<?php echo $row['nin']; ?>">
+                    <a href="dashboardNasabah.php?page=edit-nasabah-nsb&id=<?php echo $row['nin']; ?>">
                     <button><i class="fa fa-pencil"></i>edit</button> 
                     </a>
                     
-                    <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="../system/models/nasabah/delete-nasabah.php?id=<?php echo $row['nin']; ?>">
-                    <button><i class="fa fa-trash-o"></i>hapus</button>
-                    </a>
                 </td>
             </tr>
             <?php } ?>
@@ -119,7 +116,7 @@
     <br>
     <br>
 
-    <div class="buttonAdminFull">
+    <!-- <div class="buttonAdminFull">
         <a href="dashboard.php?page=tambah-data-nasabah">
         <button><i class="fa fa-plus" aria-hidden="true"></i>Tambah</button>
         </a>
@@ -131,7 +128,7 @@
         <a target="_blank" href="../system/models/nasabah/print-nasabah.php">
         <button><i class="fa fa-print" aria-hidden="true"></i>Cetak</button>
         </a>
-    </div>
+    </div> -->
 
     <script type="text/javascript" src="../datatables/js/jquery.min.js"></script>
     <script type="text/javascript" src="../datatables/js/jquery.dataTables.min.js"></script>

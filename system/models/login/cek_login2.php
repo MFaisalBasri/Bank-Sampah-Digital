@@ -9,12 +9,12 @@ ini_set('display_errors', 0);
 			$email = mysqli_real_escape_string($conn, $_POST['email']);
 			$pass = mysqli_real_escape_string($conn, $_POST['password']);
 
-
 			$data_admin = mysqli_query($conn, "SELECT * FROM admin WHERE email = '$email' AND password = '$pass'");
-			// $data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE email = '$email' AND password = '$pass'");
+			$data_nasabah = mysqli_query($conn, "SELECT * FROM nasabah WHERE email = '$email' AND password = '$pass'");
 
 			// $n = mysqli_fetch_array($data_nasabah);
 			$a = mysqli_fetch_array($data_admin);
+			$n = mysqli_fetch_array($data_nasabah);
 
 			// admin
 			$email_a = $a['email'];
@@ -25,17 +25,19 @@ ini_set('display_errors', 0);
 			
 			$nia = $a['nia']; 	
 			$cek_admin = mysqli_num_rows($data_admin);
+
 			// nasabah
-			// $email_n = $n['email'];
-			// $password_n = $n['password'];
-			// $nama_n = $n['nama'];
-			// $telepon_n = $n['telepon'];
-			// $alamat = $n['alamat'];
-			// $nin = $n['nin'];
-			// $rt = $n['rt'];
-			// $saldo = $n['saldo'];
-			// $sampah = $n['sampah'];
-			// $cek_user = mysqli_num_rows($data_nasabah);
+			$email_n = $n['email'];
+			$password_n = $n['password'];
+			$nama_n = $n['nama'];
+			$telepon_n = $n['telepon'];
+			$alamat = $n['alamat'];
+			$nin = $n['nin'];
+			$rt = $n['rt'];
+			$saldo = $n['saldo'];
+			$sampah = $n['sampah'];
+			
+			$cek_user = mysqli_num_rows($data_nasabah);
 
 			if ($email == "" || $pass == "") {
 				echo "
@@ -72,10 +74,11 @@ ini_set('display_errors', 0);
 				$_SESSION['alamat'] = $alamat;
 				$_SESSION['saldo'] = $saldo;
 				$_SESSION['sampah'] = $sampah;
+				$_SESSION['user'] = $nama_n;
 				echo "
 					<script>
 						alert('Selamat Anda berhasil login!');
-						document.location.href ='../../../view/dashboard.php';
+						document.location.href ='../../../view/dashboardNasabah.php';
 					</script>
 				";	
 				}
